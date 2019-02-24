@@ -6,6 +6,7 @@ var config = require('./config');
 
 var T = new Twit(config);
 
+
 //setting up a user stream
 //
 //var stream = T.stream('user');
@@ -31,6 +32,7 @@ function tweetIt(){
     
     var r = random(r*100);
     var tweet = {
+        //editable part to post a message. replace below with params 
         status: 'here is a random number: ' + r + ' #twitterbot from Node.js'
     }
 
@@ -45,6 +47,10 @@ function tweetIt(){
         }
     }
 }
+
+////////////////////////
+//search functionality//
+////////////////////////
 
 // var params = {
 //   q: 'kevin bautista',
