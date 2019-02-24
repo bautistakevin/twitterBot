@@ -7,28 +7,31 @@ var config = require('./config');
 var T = new Twit(config);
 
 //setting up a user stream
-var stream = T.stream('user');
+//
+//var stream = T.stream('user');
 
 //anytime someone follows me, function is called
-stream.on('follow', followed);
+//******current stream functionality is broken********
+//stream.on('follow', followed);
 
-function followed(event){
-    console.log("follow event!");
-    var name = event.source.name;
-    var screenName = event.source.screen_name;
-    tweetIt('@' + screenName + ' thanks for following me! #twitterbot from Node.js');
-}
+// function followed(event){
+//     console.log("follow event!");
+//     var name = event.source.name;
+//     var screenName = event.source.screen_name;
+//     tweetIt('@' + screenName + ' thanks for following me! #twitterbot from Node.js');
+// }
 
 //function call to make bot post
 //tweetIt();
 
 //setInterval calls the function and sets it in miliseconds (1000*20 = 20 seconds)
-//setInterval(tweetIt, 1000*60)
+setInterval(tweetIt, 1000*60)
 
-function tweetIt(txt){
+function tweetIt(){
     
+    var r = random(r*100);
     var tweet = {
-        status: txt
+        status: 'here is a random number: ' + r + ' #twitterbot from Node.js'
     }
 
     T.post('statuses/update', tweet, tweeted);
