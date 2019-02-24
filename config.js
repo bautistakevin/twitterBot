@@ -1,7 +1,9 @@
 module.exports = {
-
-    consumer_key:         'CDqBy3m7PFo5wrEJJg4jFkwEx',
-    consumer_secret:      'l7GxspKlKy0JUDvufRRwe8TliWZ7NcQu9vgEjavx9dEehcS2lB',
-    access_token:         '1099351764187447296-HezNuYvdgA0FIogohhZVZJdDLTHBc0',
-    access_token_secret:  'cAtINz6SMw0m8oJ1uLRCyxhC1DFcz7ri3ajm5v3DiYVPN',
+    //in order to use the bot on your account, you must register with the twitter developer website at 
+    //https://developer.twitter.com/en.html
+    //once you get approved, you can grab the consumer keys and the access tokens from the developer side to input into these values.
+    consumer_key:         '....',
+    consumer_secret:      '....',
+    access_token:         '....',
+    access_token_secret:  '....',
 };
